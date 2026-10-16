@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ivory text-charcoal font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-brand-700 text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-charcoal px-7 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-brand-700 hover:shadow-lift disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-charcoal/15 bg-white px-7 py-3 text-sm font-semibold text-charcoal transition-all duration-300 hover:border-charcoal/40 hover:shadow-soft;
+  }
+  .input-field {
+    @apply w-full rounded-xl border border-charcoal/15 bg-white px-4 py-3 text-sm text-charcoal placeholder:text-charcoal/40 outline-none transition focus:border-brand-700 focus:ring-4 focus:ring-brand-700/10;
+  }
+  .card {
+    @apply rounded-2xl bg-white shadow-soft;
+  }
+  .section-title {
+    @apply font-display text-3xl font-semibold tracking-tight text-charcoal sm:text-4xl;
+  }
+  .section-subtitle {
+    @apply mt-3 text-[15px] leading-relaxed text-charcoal/60;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #faf7f2;
+}
+::-webkit-scrollbar-thumb {
+  background: #d3e2d8;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b3cbbb;
+}
+
+/* Hide number input arrows */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

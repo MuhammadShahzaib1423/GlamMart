@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://glammart-muhammad-shahzaibs-projects-16858ef3.vercel.app/sitemap.xml

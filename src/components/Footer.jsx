@@ -90,7 +90,17 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
-          <p className="text-xs text-white/50">© 2026 GlamMart. All rights reserved.</p>
+          <p className="text-xs text-white/50">
+            © 2026 GlamMart. All rights reserved. ·{' '}
+            <a
+              href="https://shahzaib-portfolio-muhammad-shahzaibs-projects-16858ef3.vercel.app"
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-white"
+            >
+              Built by Muhammad Shahzaib
+            </a>
+          </p>
           <div className="flex flex-wrap justify-center gap-2">
             {['Visa', 'Mastercard', 'Amex', 'PayPal', 'Apple Pay'].map((p) => (
               <span key={p} className="rounded-md bg-white/10 px-2.5 py-1 text-[11px] font-semibold text-white/70">
